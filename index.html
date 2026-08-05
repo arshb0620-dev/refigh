@@ -45,7 +45,7 @@
 
 <body>
 
-<h1>😎 سلام رفیق</h1>
+<h1 id="title">😎 سلام رفیق</h1>
 
 <p>به اولین سایت حرفه‌ای من خوش اومدی.</p>
 
@@ -54,8 +54,10 @@
 </button>
 <script>
 function welcome() {
-    alert("😎 خوش اومدی رفیق");
     document.body.style.backgroundColor = "lightblue";
+
+    document.getElementById("title").innerHTML =
+    "🚀 خوش اومدی به دنیای برنامه نویسی";
 }
 </script>
 
