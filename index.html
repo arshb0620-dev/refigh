@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>رفیق</title>
 
+
     <style>
 
         body{
@@ -23,6 +24,8 @@
             font-size:22px;
             color:#333;
         }
+     
+    
 
         button{
             margin-top:20px;
@@ -55,6 +58,13 @@
     transition:.6s;
 }
 
+#message{
+    font-size:22px;
+    color:#0066cc;
+    margin-top:25px;
+    font-weight:bold;
+}
+
     </style>
 
 </head>
@@ -72,6 +82,8 @@
     🎉 خیلی خوش اومدی رفیق!<br><br>
     حال میکنی اومدی سایتمو چک میکنی🚀
 </div>
+
+<p id="message"></p>
 
 <script>
 function welcome(){
@@ -93,7 +105,10 @@ function welcome(){
     },100);
 
     document.querySelector("button").style.display = "none";
-    
+    document.getElementById("message").innerHTML =
+    "🎯 هدف امروز: فضول یابی HTML، CSS و JavaScript";
+}
+
 }
 </script>
 
