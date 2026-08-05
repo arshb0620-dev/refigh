@@ -39,6 +39,22 @@
             background:#004999;
         }
 
+        .card{
+    width:300px;
+    margin:30px auto;
+    padding:20px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+    display:none;
+
+    opacity:0;
+    transform:translateY(30px);
+
+    transition:.6s;
+}
+
     </style>
 
 </head>
@@ -52,12 +68,29 @@
 <button onclick="welcome()">
 شروع کنیم
 </button>
+<div id="card" class="card">
+    🎉 خیلی خوش اومدی رفیق!<br><br>
+    آماده‌ای برنامه‌نویس بشی؟ 🚀
+</div>
+
 <script>
-function welcome() {
-    document.body.style.backgroundColor = "lightblue";
+function welcome(){
+
+    document.body.style.backgroundColor="lightblue";
 
     document.getElementById("title").innerHTML =
-    "🚀 خوش اومدی به دنیای برنامه نویسی";
+    "🚀 خوش اومدی به دنیای من";
+
+    let card = document.getElementById("card");
+
+    card.style.display="block";
+
+    setTimeout(function(){
+
+        card.style.opacity="1";
+        card.style.transform="translateY(0)";
+
+    },100);
 }
 </script>
 
